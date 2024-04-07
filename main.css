@@ -1,0 +1,71 @@
+:root {
+  --green: #00FF00;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+
+
+body {
+  background: var(--bg);
+  color: var(--fontColor);
+  font-family: helvetica;
+}
+
+/* ul {
+  font-family: helvetica;
+} */
+
+li {
+  list-style: circle;
+}
+
+.list {
+  list-style: square;
+}
+
+/* #msg {
+  font-family: monospace;
+} */
+
+
+/* 您定义了两个新变量bg和fontColor，它们指定背景和字体颜色。
+这些变量使用var关键字将其属性值设置为先前在选择器中指定的变量:root。 */
+.light-theme {
+  --bg: var(--green);
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+}
+
+
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--green);
+  --btnBg: var(--white);
+  --btnFontColor: var(--black);
+}
+
+
+.btn {
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
+.btn {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
+.btn:hover {
+  box-shadow: 10px 5px 5px rgb(190, 50, 125);
+  transform: translateY(-5px);
+  /* 上浮效果 */
+}
